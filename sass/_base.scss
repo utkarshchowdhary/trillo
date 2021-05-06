@@ -1,0 +1,54 @@
+:root {
+  //  COLORS
+  --fuchsia: #eb2f64;
+  --light-fuchsia: #ff3366;
+  --dark-fuchsia: #ba265d;
+  --grey: #6d6875;
+  --light-brown: #ddbea9;
+  --light-grey: #e7d8c9;
+  --white-smoke: #ece4db;
+  --dark-grey: #5e6472;
+
+  // BORDER
+  --line: 0.1rem solid var(--light-grey);
+
+  // SHADOW
+  --light-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.06);
+}
+
+// BREAKPOINTS
+$bp-largest: 75em;
+$bp-large: 68.75em;
+$bp-medium: 56.25em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Segoe UI";
+  color: var(--grey);
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--light-fuchsia),
+    var(--dark-fuchsia)
+  );
+}
